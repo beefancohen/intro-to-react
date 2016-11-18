@@ -41,6 +41,7 @@ export default class Presentation extends React.Component {
           <SLIDES.Intro transition={["zoom"]}/>
           <SLIDES.WhyReact logo={images.reactLogo} transition={["zoom"]} />
           <SLIDES.ComponentSlide transition={["zoom"]} />
+          <SLIDES.WhyReact logo={images.reactLogo} transition={["zoom"]} />
         </Deck>
       </Spectacle>
     );

@@ -4,13 +4,15 @@ import React, { PropTypes, Component } from "react";
 export default class ComponentSlide extends Component {
   render() {
     const {
-      transition
+      transition,
+      slideIndex
     } = this.props;
 
     return (
       <CodeSlide
         transition={transition}
         lang="js"
+        slideIndex={slideIndex}
         code={require("raw!../../assets/component.example")}
         ranges={[
           { loc: [0, 3], title: "Ryan's Apple Pie" },
@@ -26,5 +28,6 @@ export default class ComponentSlide extends Component {
 }
 
 ComponentSlide.propTypes = {
-  transition: PropTypes.arrayOf(PropTypes.string).isRequired
+  transition: PropTypes.arrayOf(PropTypes.string).isRequired,
+  slideIndex: PropTypes.string.isRequired
 };
