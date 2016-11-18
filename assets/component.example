@@ -1,0 +1,57 @@
+import React from "react";
+
+class Pie extends React.Component {
+  static propTypes = {
+    type: React.PropTypes.oneOf(["Apple", "Pumpkin"])
+  }
+
+  static defaultProps = {
+    type: "Pumpkin"
+  }
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isDoneBaking: false
+    };
+
+    this.bake = this.bake.bind(this);
+  }
+
+  componentDidMount() {
+    // Here we can do things like fetch important things like
+    // what kind of pie our user likes, any allergies he/she has, etc.
+  }
+
+  bake() {
+    this.setState({
+      isDoneBaking: true
+    });
+  }
+
+  render() {
+    const {
+      type
+    } = this.props;
+
+    const {
+      isDoneBaking
+    } = this.state;
+
+    const imageSource = type === "Apple" ? "./applepie.png" : "./pumpkinpie.png";
+
+    return (
+      <div>
+        <button onClick={this.bake} />
+        {
+          isDoneBaking ?
+          <image src={imageSource} /> :
+          null
+        }
+      </div>
+    );
+  }
+}
+
+export default Pie;

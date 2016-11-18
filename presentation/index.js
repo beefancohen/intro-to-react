@@ -3,24 +3,12 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  Appear,
-  BlockQuote,
-  Cite,
-  CodePane,
   Deck,
-  Fill,
-  Heading,
-  Image,
-  Layout,
-  Link,
-  ListItem,
-  List,
-  Markdown,
-  Quote,
-  Slide,
-  Spectacle,
-  Text
+  Spectacle
 } from "spectacle";
+
+// import slides
+import SLIDES from "./slides";
 
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
@@ -31,8 +19,11 @@ import createTheme from "spectacle/lib/themes/default";
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
+require("./index.css");
 
-const images = {};
+const images = {
+  reactLogo: require("../assets/logo.svg")
+};
 
 preloader(images);
 
@@ -46,23 +37,10 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Spectacle theme={theme}>
-        <Deck transition={["zoom", "slide"]} transitionDuration={500}>
-          <Slide transition={["zoom"]} bgColor="primary">
-            <Heading size={1} fit caps lineHeight={1} textColor="black">
-              ReactJS
-            </Heading>
-            <Heading size={1} fit caps textColor="white">
-              Ethan Cohen
-            </Heading>
-            <Link href="https://twitter.com/beefancohen">
-              <Text bold caps textColor="tertiary" target="_blank">@beefancohen</Text>
-            </Link>
-          </Slide>
-          <Slide transition={["zoom"]} bgColor="tertiary">
-            <Heading size={1} fit caps lineHeight={1} textColor="black">
-              Why React?
-            </Heading>
-          </Slide>
+        <Deck transition={["zoom"]} transitionDuration={500} progress="bar">
+          <SLIDES.Intro transition={["zoom"]}/>
+          <SLIDES.WhyReact logo={images.reactLogo} transition={["zoom"]} />
+          <SLIDES.ComponentSlide transition={["zoom"]} />
         </Deck>
       </Spectacle>
     );
