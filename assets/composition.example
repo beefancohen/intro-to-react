@@ -1,0 +1,11 @@
+<Slide transition={transition} bgColor="black">
+  <Heading size={4} fit caps lineHeight={1} textColor="primary">
+    Components & Props
+  </Heading>
+  <List>
+    <ListItem>Reason about your UI in isolation</ListItem>
+    <ListItem>Essentially just factory functions (props => instance)</ListItem>
+    <ListItem>Smart components vs dumb components (FP)</ListItem>
+    <ListItem>Props are immutable</ListItem>
+  </List>
+</Slide>

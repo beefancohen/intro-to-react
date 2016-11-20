@@ -22,7 +22,10 @@ require("spectacle/lib/themes/default/index.css");
 require("./index.css");
 
 const images = {
-  reactLogo: require("../assets/logo.svg")
+  reactLogo: require("../assets/logo.svg"),
+  magic: require("../assets/magic.gif"),
+  pumpkinPie: require("../assets/pumpkinpie.png"),
+  applePie: require("../assets/applepie.png")
 };
 
 preloader(images);
@@ -37,11 +40,12 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Spectacle theme={theme}>
-        <Deck transition={["zoom"]} transitionDuration={500} progress="bar">
-          <SLIDES.Intro transition={["zoom"]}/>
-          <SLIDES.WhyReact logo={images.reactLogo} transition={["zoom"]} />
-          <SLIDES.ComponentSlide transition={["zoom"]} />
-          <SLIDES.WhyReact logo={images.reactLogo} transition={["zoom"]} />
+        <Deck transition={[]} transitionDuration={500} progress="bar">
+          <SLIDES.Intro transition={[]}/>
+          <SLIDES.WhyReact logo={images.reactLogo} transition={[]} />
+          <SLIDES.ComponentSlide transition={[]} magic={images.magic} />
+          <SLIDES.Bake applePie={images.applePie} pumpkinPie={images.pumpkinPie} type="Pumpkin" transition={[]} />
+          <SLIDES.Components transition={[]} />
         </Deck>
       </Spectacle>
     );

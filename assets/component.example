@@ -25,28 +25,26 @@ class Pie extends React.Component {
   }
 
   bake() {
+    // gather ingredients
+    // mix them
+    // bake them
+    // then...
     this.setState({
       isDoneBaking: true
     });
   }
 
   render() {
-    const {
-      type
-    } = this.props;
-
-    const {
-      isDoneBaking
-    } = this.state;
-
+    const { type } = this.props;
+    const { isDoneBaking } = this.state;
     const imageSource = type === "Apple" ? "./applepie.png" : "./pumpkinpie.png";
 
     return (
       <div>
-        <button onClick={this.bake} />
+        <button className="BakeButton" onClick={this.bake}>Bake!</button>
         {
-          isDoneBaking ?
-          <image src={imageSource} /> :
+          isDoneBaking === true ?
+            <image src={imageSource} /> :
           null
         }
       </div>
