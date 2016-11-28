@@ -33,7 +33,8 @@ preloader(images);
 const theme = createTheme({
   primary: "#1da1f2",
   secondary: "#e6ecf0",
-  tertiary: "#a5f2aa"
+  tertiary: "#a5f2aa",
+  quarternary: "#a01744"
 });
 
 export default class Presentation extends React.Component {
@@ -46,6 +47,10 @@ export default class Presentation extends React.Component {
           <SLIDES.ComponentSlide transition={[]} magic={images.magic} />
           <SLIDES.Bake applePie={images.applePie} pumpkinPie={images.pumpkinPie} type="Pumpkin" transition={[]} />
           <SLIDES.Components transition={[]} />
+          <SLIDES.State transition={[]} />
+          <SLIDES.Events transition={[]} />
+          <SLIDES.Build transition={[]} />
+          <SLIDES.Prereqs transition={[]} />
         </Deck>
       </Spectacle>
     );

@@ -1,0 +1,21 @@
+class Button extends Component {
+  constructor(props) {
+    super(props);
+
+    this._handleButtonClick = this._handleButtonClick.bind(this);
+  }
+
+  _handleButtonClick(e) {
+    e.preventDefault();
+    
+    console.log("Button was clicked!");
+
+    this.props.onClick(e);
+  }
+
+  render() {
+    return (
+      <button onClick={this._handleButtonClick}>Click me!</button>
+    );
+  }
+}

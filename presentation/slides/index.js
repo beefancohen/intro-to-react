@@ -4,6 +4,9 @@ import ComponentSlide from "./component.jsx";
 import Bake from "./bake.jsx";
 import Components from "./components.jsx";
 import State from "./state.jsx";
+import Events from "./events.jsx";
+import Build from "./build.jsx";
+import Prereqs from "./prereqs.jsx";
 
 const SLIDES = {
   Intro,
@@ -11,7 +14,10 @@ const SLIDES = {
   ComponentSlide,
   Bake,
   Components,
-  State
+  State,
+  Events,
+  Build,
+  Prereqs
 };
 
 export default SLIDES;
