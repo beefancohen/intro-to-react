@@ -28,7 +28,7 @@ export default class Events extends Component {
           <Fill>
             <List textColor="black">
               <ListItem textSize={TEXT_SIZE}>Events bubble up from low-level DOM elements</ListItem>
-              <ListItem textSize={TEXT_SIZE}>Pass in a function to the handler</ListItem>
+              <ListItem textSize={TEXT_SIZE}>Pass in a handler function as the prop</ListItem>
               <ListItem textSize={TEXT_SIZE}>
                 Common handlers: onClick, onChange, onFocus, onBlur,&nbsp;
                 <Link href="https://facebook.github.io/react/docs/events.html" textColor="primary" target="_blank">

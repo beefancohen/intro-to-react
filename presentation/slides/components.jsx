@@ -21,7 +21,7 @@ export default class Components extends Component {
         <List>
           <ListItem>Reason about your UI in isolation</ListItem>
           <ListItem>Essentially just factory functions: (props, state) => instance</ListItem>
-          <ListItem>Smart components vs dumb components (FP)</ListItem>
+          <ListItem>Container components vs presentational components (FP)</ListItem>
           <ListItem>Props are immutable</ListItem>
         </List>
         <CodePane

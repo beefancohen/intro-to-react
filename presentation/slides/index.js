@@ -7,6 +7,8 @@ import State from "./state.jsx";
 import Events from "./events.jsx";
 import Build from "./build.jsx";
 import Prereqs from "./prereqs.jsx";
+import FirstStep from "./first-step.jsx";
+import Project from "./project.jsx";
 
 const SLIDES = {
   Intro,
@@ -17,7 +19,9 @@ const SLIDES = {
   State,
   Events,
   Build,
-  Prereqs
+  Prereqs,
+  FirstStep,
+  Project
 };
 
 export default SLIDES;

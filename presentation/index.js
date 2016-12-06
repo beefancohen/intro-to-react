@@ -51,6 +51,8 @@ export default class Presentation extends React.Component {
           <SLIDES.Events transition={[]} />
           <SLIDES.Build transition={[]} />
           <SLIDES.Prereqs transition={[]} />
+          <SLIDES.FirstStep transition={[]} />
+          <SLIDES.Project transition={[]} />
         </Deck>
       </Spectacle>
     );
