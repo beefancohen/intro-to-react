@@ -24,7 +24,7 @@ export default class FirstStep extends Component {
         <List textColor="quarternary">
           <ListItem>create-react-app intro-to-react</ListItem>
           <ListItem>cd intro-to-react</ListItem>
-          <ListItem>npm install superagent classnames</ListItem>
+          <ListItem>npm install superagent classnames --save</ListItem>
           <ListItem style={INDENT_STYLE}>
             <small>superagent to make AJAX requests</small>
           </ListItem>

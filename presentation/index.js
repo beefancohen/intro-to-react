@@ -45,7 +45,7 @@ export default class Presentation extends React.Component {
           <SLIDES.Intro transition={[]}/>
           <SLIDES.WhyReact logo={images.reactLogo} transition={[]} />
           <SLIDES.ComponentSlide transition={[]} magic={images.magic} />
-          <SLIDES.Bake applePie={images.applePie} pumpkinPie={images.pumpkinPie} type="Pumpkin" transition={[]} />
+          <SLIDES.Bake applePie={images.applePie} pumpkinPie={images.pumpkinPie} type="Apple" transition={[]} />
           <SLIDES.Components transition={[]} />
           <SLIDES.State transition={[]} />
           <SLIDES.Events transition={[]} />
